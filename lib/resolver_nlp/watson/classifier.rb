@@ -3,9 +3,9 @@ module ResolverNlp
     class ResolverNlp::Watson::Classifier
       include ResolverNlp::Watson::Connection
 
-      def response(classifier_id, text, max_length=1024)
+      def response(text, max_length=1024)
         connection.get do |req|
-          req.url classifier_url(classifier_id)
+          req.url classifier_url(ResolverNlp::Watson::Config.classifier_id)
           req.params['text'] = text
         end
       end

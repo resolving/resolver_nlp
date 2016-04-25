@@ -9,7 +9,7 @@ module ResolverNlp
         @@username = val
       end
 
-      def self.password(val)
+      def self.password=(val)
         @@password = val
       end
 
@@ -20,6 +20,15 @@ module ResolverNlp
       def self.username
         @@username
       end
+
+      def self.classifier_id=(val)
+        @@classifier_id = val
+      end
+
+      def self.classifier_id
+        @@classifier_id
+      end
+
 
     end
   end
